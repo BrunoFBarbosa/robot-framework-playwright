@@ -5,6 +5,7 @@ on: [push]
 jobs:
   web-test:
     runs-on: ubuntu-20.04
+    permissions: write-all
     steps:
       - name: Checkout
         uses: actions/checkout@v3
@@ -48,9 +49,9 @@ jobs:
           name: results-chromium
       
       - name: Send Report
-      if: always()
-      uses: joonvena/robotframework-reporter-action@v2.1
-      with:
-        report_path: results-chromium
-        gh_access_token: ${{secrets.GITHUB_TOKEN}}
-        show_passed_tests: false
+        if: always()
+        uses: joonvena/robotframework-reporter-action@v2.1
+        with:
+          report_path: results-chromium
+          gh_access_token: ${{secrets.GITHUB_TOKEN}}
+          show_passed_tests: false
