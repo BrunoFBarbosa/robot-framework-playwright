@@ -120,7 +120,9 @@ Logar Usuario Cadastrado Via API
 
 
 Cadastrar Usuario E Logar
-    New Browser
+    New Browser        browser=${BROWSER}
+    ...                headless=${HEADLESS}
+
     New Page    url=${SITE_SERVE_REST}
     Criar Usuario Via API
     Logar Usuario Cadastrado Via API
