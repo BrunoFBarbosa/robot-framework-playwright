@@ -1,4 +1,5 @@
 /browser
+/results
+/playwright-log.txt
 *.html
 *.xml
-*.txt
