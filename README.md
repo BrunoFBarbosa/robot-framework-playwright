@@ -1,6 +1,6 @@
 # About the Project
 
-[![e2e-tests](https://github.com/BrunoFBarbosa/playwright-cucumber-automation/actions/workflows/ci.yml/badge.svg)](https://github.com/BrunoFBarbosa/playwright-cucumber-automation/actions/workflows/ci.yml)
+[![e2e-tests](https://github.com/BrunoFBarbosa/robot-framework-playwright/actions/workflows/webtesting-workflow.yml/badge.svg)](https://github.com/BrunoFBarbosa/robot-framework-playwright/actions/workflows/webtesting-workflow.yml)
 
 A web automation framework to learn about the integration of Robot Framework 🤖 , Playwright 🎭 and Github Actions ✔ and to consolidate the knowledge from the course [Robot Framework With Playwright And Github Actions](https://www.udemy.com/course/robot-framework-com-playwright-e-github-actions/) . The application under test is https://front.serverest.dev/
 
@@ -66,7 +66,7 @@ strategy:
 
 #### 2. **webtesting-manual-workflow.yml**
 
-A workflow that can be triggered manually in order to run any specific test tag against the browsers, using the same matrix strategy from the previous workflow. You can go [here](https://github.com/BrunoFBarbosa/robot-framework-playwright/actions/workflows/webtesting-manual-workflow.yml), click on `Run Workflow` and choose a desired tag to run.
+A workflow that can be triggered manually in order to run any specific test tag against the browsers, using the same matrix strategy from the previous workflow. You can go [here](https://github.com/BrunoFBarbosa/robot-framework-playwright/actions/workflows/webtesting-manual-workflow.yml), click on Run Workflow and choose a desired tag to run.
 ```
 on:
   workflow_dispatch:
@@ -74,5 +74,26 @@ on:
       tag:
         type: string
         description: Qual é a TAG do teste a ser executada?
+        required: true
+```
+
+#### 3. **webtesting-manual-browser-workflow.yml**
+
+A workflow that can be triggered manually similar to the previous workflow. The difference here is that it does not uses a matrix strategy. You can choose which browser you want to run the test against. You can go [here](https://github.com/BrunoFBarbosa/robot-framework-playwright/actions/workflows/webtesting-manual-browser-workflow.yml), click on `Run Workflow` and choose a desired tag and browser to run.
+```
+on:
+  workflow_dispatch:
+    inputs:
+      tag:
+        type: string
+        description: Qual é a TAG do teste a ser executada?
+        required: true
+      browser:
+        type: choice
+        options:
+        - chromium
+        - firefox
+        - webkit
+        description: Qual é o navegador onde serão executados os testes?
         required: true
 ```
