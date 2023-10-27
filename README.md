@@ -2,7 +2,7 @@
 
 [![e2e-tests](https://github.com/BrunoFBarbosa/robot-framework-playwright/actions/workflows/webtesting-workflow.yml/badge.svg)](https://github.com/BrunoFBarbosa/robot-framework-playwright/actions/workflows/webtesting-workflow.yml)
 
-A web automation framework to learn about the integration of Robot Framework 🤖 , Playwright 🎭 and Github Actions ✔ and to consolidate the knowledge from the course [Robot Framework With Playwright And Github Actions](https://www.udemy.com/course/robot-framework-com-playwright-e-github-actions/) . The application under test is https://front.serverest.dev/
+A web automation framework to learn about the integration of Robot Framework 🤖 , Playwright 🎭 and Github Actions ✔ and to consolidate the knowledge from the course [Robot Framework With Playwright And Github Actions](https://www.udemy.com/course/robot-framework-com-playwright-e-github-actions/). The application under test is https://front.serverest.dev/
 
 # Main topics covered in this project
 
